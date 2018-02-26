@@ -1,0 +1,29 @@
+pragma solidity ^0.4.17;
+
+contract Tracer {
+
+	struct Metadata {
+			string date;
+			string temperature;
+	}
+
+	//mapping(string => Metadata[]) meta;
+	mapping(string => string) meta;
+
+  //function TagMeta(string _serial, string _date, string _temp) public{
+	//		Metadata memory metadata = Metadata(_date, _temp);
+	//		meta[_serial].push[metadata];
+  //}
+
+	function TagMeta(string _serial, string _temp) public{
+			meta[_serial] = _temp;
+  }
+
+  //function Retrieve(string _serial) view public returns(string, string){
+  //    return (meta[_serial][1].temperature, meta[_serial][1].date);
+  //}
+
+	function GetMeta(string _serial) view public returns(string){
+      return meta[_serial];
+  }
+}

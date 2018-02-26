@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lot Trace</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+</head>
+<body>
+  <br>
+  <h1>Update trace</h1>
+  <br><label for="serial">Serial #:</label><input type="text" id="serial" placeholder="e.g., Lot1"></input>
+  <br><label for="temperature">Temperature:</label><input type="text" id="temperature" placeholder="e.g., 20 degrees"></input>
+  <br><br><button id="send" onclick="App.sendTemp()">Send temp</button>
+  <br><br>
+  <span id="status"></span>
+  <br><br>
+  <div id="showData"></div>
+  <br><br>
+  <h1>Read logs</h1>
+  <br><label for="serial2">Serial #:</label><input type="text" id="serial2" placeholder="e.g., Lot1"></input>
+  <br><br><button id="get" onclick="App.readlogs2()">All logs</button>
+  <button id="get" onclick="App.readlogs()">Serial logs</button>
+  <br><br>
+</body>
+</html>
